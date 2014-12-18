@@ -3,7 +3,6 @@
 
 #ifndef FiniteStateMachine_h
 #define FiniteStateMachine_h
-#include <Arduino.h>
 
 class FiniteStateMachine
 {
@@ -12,6 +11,7 @@ class FiniteStateMachine
     FiniteStateMachine(uint8_t name);
 
     void runStateMachine();
+    void testStateMachine();
 
     void setState(uint8_t state);
     uint8_t getState();

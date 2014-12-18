@@ -4,7 +4,8 @@
 #include <Arduino.h>
 
 #include <FiniteStateMachine.h>
-#include <defines.h>
+
+#include "defines.h"
 
 /// Constructor
 FiniteStateMachine::FiniteStateMachine()
@@ -21,6 +22,36 @@ FiniteStateMachine::FiniteStateMachine(uint8_t name)
 
 /// runStateMachine: run the state machine
 void FiniteStateMachine::runStateMachine()
+{
+  switch(getState() ) {
+    case START_STATE: // The first state in the FSM
+      printInfo();
+      break;
+
+    case SELFCHECK_STATE:
+      printInfo();
+      break;
+
+    case IDLE_STATE:
+      printInfo();
+      break;
+
+    case STOPPED_STATE:
+      printInfo();
+      break;
+
+    case BATTERY_LOW_STATE:
+      printInfo();
+      break;
+
+    case ERROR_STATE:
+      printInfo();
+      break;
+  }
+}
+
+/// testStateMachine: test the state machine (just loop through some states)
+void FiniteStateMachine::testStateMachine()
 {
   switch(getState() ) {
     case START_STATE: // The first state in the FSM
