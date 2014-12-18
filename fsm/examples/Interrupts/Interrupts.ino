@@ -1,4 +1,4 @@
-#include <FiniteStateMachine.h>
+#include <fsmMaster.h>
 
 // TODO: create an example with interrupts here
 

@@ -1,6 +1,6 @@
-#include <FiniteStateMachine.h>
+#include <fsmMaster.h>
 
-FiniteStateMachine stateMachine;
+fsmMaster machine1(1);
 
 void setup()
 {
@@ -9,6 +9,6 @@ void setup()
 
 void loop()
 {
-  stateMachine.runStateMachine();
+  machine1.run();
   delay(500);                                     //make it readable
 }

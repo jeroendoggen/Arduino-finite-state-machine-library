@@ -6,13 +6,13 @@
 
 
 fsmSlave slave1(1);
-// fsmSlave slave2(2);
-// fsmSlave slave3(3);
+fsmSlave slave2(2);
+fsmSlave slave3(3);
 
 // fsmMaster master(0);
-fsmMaster master(0, slave1);
+// fsmMaster master(0, slave1);
 // fsmMaster master(0, slave1, slave2);
-
+fsmMaster master(0, slave1, slave2, slave3);
 
 void setup()
 {

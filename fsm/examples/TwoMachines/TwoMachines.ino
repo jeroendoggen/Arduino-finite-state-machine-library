@@ -1,7 +1,7 @@
-#include <FiniteStateMachine.h>
+#include <fsmMaster.h>
 
-FiniteStateMachine stateMachine1(1);
-FiniteStateMachine stateMachine2(2);
+fsmMaster machine1(1);
+fsmMaster machine2(2);
 
 void setup()
 {
@@ -10,11 +10,10 @@ void setup()
 
 void loop()
 {
-  stateMachine1.runStateMachine();
-  if(stateMachine1.getState() == 2)
+  machine1.run();
+  if(machine1.getState() == 2)
   {
-    stateMachine1.runStateMachine();
-    stateMachine2.runStateMachine();
+    machine2.run();
   }
-  delay(500);
+  delay(1000);
 }
