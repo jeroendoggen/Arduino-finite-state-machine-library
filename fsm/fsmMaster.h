@@ -15,8 +15,8 @@ class fsmMaster : public fsm
     fsmMaster();
     fsmMaster(uint8_t name);
     fsmMaster(uint8_t name, class fsm & slave);
-    fsmMaster(uint8_t name, class fsm & slave, class fsm & slave);
-    fsmMaster(uint8_t name, class fsm & slave, class fsm & slave, class fsm & slave);
+//     fsmMaster(uint8_t name, class fsm & slave, class fsm & slave);
+//     fsmMaster(uint8_t name, class fsm & slave, class fsm & slave, class fsm & slave);
     void run();
 
   private:
