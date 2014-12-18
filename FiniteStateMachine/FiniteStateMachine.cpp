@@ -4,87 +4,51 @@
 #include <Arduino.h>
 
 #include <FiniteStateMachine.h>
-
-#include "defines.h"
-
-/// Constructor
-FiniteStateMachine::FiniteStateMachine()
-{
-  _state = START_STATE;
-}
+#include <defines.h>
 
 /// Constructor
-FiniteStateMachine::FiniteStateMachine(uint8_t name)
-{
-  _state = START_STATE;
-  _setMachineName(name);
-}
+// FiniteStateMachine::FiniteStateMachine()
+// {
+//   _state = START_STATE;
+// }
+// 
+
 
 /// runStateMachine: run the state machine
-void FiniteStateMachine::runStateMachine()
-{
-  switch(getState() ) {
-    case START_STATE: // The first state in the FSM
-      printInfo();
-      break;
-
-    case SELFCHECK_STATE:
-      printInfo();
-      break;
-
-    case IDLE_STATE:
-      printInfo();
-      break;
-
-    case STOPPED_STATE:
-      printInfo();
-      break;
-
-    case BATTERY_LOW_STATE:
-      printInfo();
-      break;
-
-    case ERROR_STATE:
-      printInfo();
-      break;
-  }
-}
-
-/// testStateMachine: test the state machine (just loop through some states)
-void FiniteStateMachine::testStateMachine()
-{
-  switch(getState() ) {
-    case START_STATE: // The first state in the FSM
-      printInfo();
-      setState(SELFCHECK_STATE);
-      break;
-
-    case SELFCHECK_STATE:
-      printInfo();
-      setState(IDLE_STATE);
-      break;
-
-    case IDLE_STATE:
-      printInfo();
-      setState(STOPPED_STATE);
-      break;
-
-    case STOPPED_STATE:
-      printInfo();
-      setState(BATTERY_LOW_STATE);
-      break;
-
-    case BATTERY_LOW_STATE:
-      printInfo();
-      setState(ERROR_STATE);
-      break;
-
-    case ERROR_STATE:
-      printInfo();
-      setState(IDLE_STATE);
-      break;
-  }
-}
+// void FiniteStateMachine::runStateMachine()
+// {
+//   switch(getState() ) {
+//     case START_STATE: // The first state in the FSM
+//       printInfo();
+//       setState(SELFCHECK_STATE);
+//       break;
+// 
+//     case SELFCHECK_STATE:
+//       printInfo();
+//       setState(IDLE_STATE);
+//       break;
+// 
+//     case IDLE_STATE:
+//       printInfo();
+//       setState(STOPPED_STATE);
+//       break;
+// 
+//     case STOPPED_STATE:
+//       printInfo();
+//       setState(BATTERY_LOW_STATE);
+//       break;
+// 
+//     case BATTERY_LOW_STATE:
+//       printInfo();
+//       setState(ERROR_STATE);
+//       break;
+// 
+//     case ERROR_STATE:
+//       printInfo();
+//       setState(IDLE_STATE);
+//       break;
+//   }
+// }
 
 
 /// setState: set FSM state

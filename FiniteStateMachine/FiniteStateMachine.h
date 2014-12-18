@@ -3,26 +3,29 @@
 
 #ifndef FiniteStateMachine_h
 #define FiniteStateMachine_h
+#include <Arduino.h>
 
+
+#define __cxa_pure_virtual()
+
+//abstract class FiniteStateMachine
 class FiniteStateMachine
 {
   public:
-    FiniteStateMachine();
-    FiniteStateMachine(uint8_t name);
-
-    void runStateMachine();
-    void testStateMachine();
+//     FiniteStateMachine();
 
     void setState(uint8_t state);
     uint8_t getState();
 
     uint8_t getMachineName();
-
+  
   private:
-    void _setMachineName(uint8_t name);
+    virtual void runStateMachine();
 
-    uint8_t _state;
-    uint8_t _machineName;
+  protected:
+    void _setMachineName(uint8_t name);
     void printInfo();
+    uint8_t _state;
+    uint8_t _machineName; 
 };
 #endif

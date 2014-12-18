@@ -1,10 +1,13 @@
 #include <FiniteStateMachine.h>
+#include <FiniteStateMachineChild1.h>
+#include <FiniteStateMachineChild2.h>
+#include <FiniteStateMachineChild3.h>
 
 // TODO: write an example with a 'master FSM' that is controlling two slave FSMs here
 
-FiniteStateMachine Master(1);
-FiniteStateMachine Slave1(2);
-FiniteStateMachine Slave2(3);
+FiniteStateMachineChild1 child1(1);
+FiniteStateMachineChild2 child2(2);
+FiniteStateMachineChild3 child3(3);
 
 void setup()
 {
@@ -13,10 +16,10 @@ void setup()
 
 void loop()
 {
-  Master.runStateMachine();
-  Slave1.runStateMachine();
-  Slave1.runStateMachine();
-  delay(500);
+  child1.runStateMachine();
+  child2.runStateMachine();
+  child3.runStateMachine();
+  delay(1000);
 }
 
 
